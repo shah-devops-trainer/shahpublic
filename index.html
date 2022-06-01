@@ -1,10 +1,18 @@
 <html>
 	<head>
 		<script type="text/javascript">
-			function dosubmit()
+			function doIndian()
 			{
 				var first_name = document.getElementById("fName").value;
 				console.log("Entered First Name is ==> "+first_name);
+
+				document.getElementById("fullNameOut").innerHTML = document.getElementById("fName").value + " " + document.getElementById("lName").value;
+
+			}
+
+			function doAmerican()
+			{
+				document.getElementById("fullNameOut").innerHTML = document.getElementById("lName").value + ", " + document.getElementById("fName").value ;
 			}
 
 		</script>
@@ -15,8 +23,10 @@
 	<h1> line1 </h1>
 	<h2> adding line in urgnet-branch.     ADDING LINE IN URGENT-BRANCH </h2>
 	<h3>adding line 3 in html file in VSCode to commit to remote repo</h3>
-	<input type="text" id="fName" />
-	<button onclick="dosubmit()">Submit</button>
-	<div id="fNameOut"></div>
+	<p> Enter Your First Name  <input type="text" id="fName" /> </p>
+	<p> Enter Your Last Name  <input type="text" id="lName" /> </p>
+	<button onclick="doIndian()">Indian Style</button>
+	<button onclick="doAmerican()">American Style</button>
+	<div id="fullNameOut"></div>
 	</body>
 </html>
