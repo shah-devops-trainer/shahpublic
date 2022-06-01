@@ -1,10 +1,11 @@
 <html>
 	<head>
+		<link href="css/salesforce-lightning-design-system.css" rel="stylesheet" />
 		<script type="text/javascript">
 			function doIndian()
 			{
 				var first_name = document.getElementById("fName").value;
-				console.log("Entered First Name is ==> "+first_name);
+				//console.log("Entered First Name is ==> "+first_name);
 
 				document.getElementById("fullNameOut").innerHTML = document.getElementById("fName").value + " " + document.getElementById("lName").value;
 
@@ -19,14 +20,17 @@
 		
 	</head>
 	<body>
-		<img src="pic_bulbon.gif" alt="bulb on" />
+		<center> <img class="slds-var-m-around_medium slds-var-p-around_medium" src="pic_bulbon.gif" alt="bulb on" /> </center>
+	<div class="slds slds-card slds-var-m-around_medium slds-var-p-around_medium">
 	<h1> line1 </h1>
 	<h2> adding line in urgnet-branch.     ADDING LINE IN URGENT-BRANCH </h2>
 	<h3>adding line 3 in html file in VSCode to commit to remote repo</h3>
-	<p> Enter Your First Name  <input type="text" id="fName" /> </p>
-	<p> Enter Your Last Name  <input type="text" id="lName" /> </p>
-	<button onclick="doIndian()">Indian Style</button>
-	<button onclick="doAmerican()">American Style</button>
-	<div id="fullNameOut"></div>
+	<p> Enter Your First Name  <input class="slds slds-input" type="text" id="fName" /> </p>
+	<p> Enter Your Last Name   <input  class="slds slds-input"type="text" id="lName" /> </p>
+	<button class="slds slds-button slds-button_brand" onclick="doIndian()">Indian Style</button>
+	<button  class="slds slds-button slds-button_destructive" onclick="doAmerican()">American Style</button>
+	<div class="slds slds-text slds-text-heading_large slds-text-color_success" id="fullNameOut"></div>
+
+</div>
 	</body>
 </html>
